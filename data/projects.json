@@ -5,13 +5,26 @@
     "subtitle": "Borsa İstanbul Teknik Analiz Platformu",
     "description": "Python tabanlı, gerçek zamanlı BIST hisse senedi verilerini çeken, teknik indikatörler (RSI, MACD, Bollinger Bantları) hesaplayan ve interaktif grafikler üreten tam kapsamlı analiz terminali.",
     "category": "Python / Fintech",
-    "tags": ["Python", "Pandas", "Plotly", "Streamlit", "REST API", "Teknik Analiz"],
+    "tags": [
+      "Python",
+      "Pandas",
+      "Plotly",
+      "Streamlit",
+      "REST API",
+      "Teknik Analiz"
+    ],
     "hardware": [],
-    "software": ["Python 3.11", "Pandas", "Plotly", "Streamlit", "yfinance / BIST API"],
-    "github_url": "https://github.com/enesboz-9/bist",
-     "demo_url": "https://liicwet2rsxjrxjmtbvt5w.streamlit.app/",
+    "software": [
+      "Python 3.11",
+      "Pandas",
+      "Plotly",
+      "Streamlit",
+      "yfinance / BIST API"
+    ],
+    "github_url": "https://github.com/kullanici-adiniz/bist-analiz-terminali",
     "status": "Aktif Geliştirme",
-    "highlight": true
+    "highlight": true,
+    "demo_url": ""
   },
   {
     "id": 2,
@@ -19,12 +32,27 @@
     "subtitle": "VHDL ile Tasarlanmış Seri İletişim Çekirdeği",
     "description": "Xilinx Artix-7 FPGA üzerinde VHDL ile implemente edilmiş, yapılandırılabilir baud hızı destekleyen, FIFO tamponlu tam çift yönlü UART haberleşme çekirdeği. Vivado ile sentezlenip FPGA'ya yüklenmiştir.",
     "category": "FPGA / VHDL",
-    "tags": ["VHDL", "FPGA", "UART", "Xilinx", "Vivado", "RTL Tasarım"],
-    "hardware": ["Xilinx Artix-7 (Basys 3)", "USB-UART Köprü"],
-    "software": ["Vivado 2023.2", "ModelSim", "VHDL-2008"],
+    "tags": [
+      "VHDL",
+      "FPGA",
+      "UART",
+      "Xilinx",
+      "Vivado",
+      "RTL Tasarım"
+    ],
+    "hardware": [
+      "Xilinx Artix-7 (Basys 3)",
+      "USB-UART Köprü"
+    ],
+    "software": [
+      "Vivado 2023.2",
+      "ModelSim",
+      "VHDL-2008"
+    ],
     "github_url": "https://github.com/kullanici-adiniz/fpga-uart-core",
     "status": "Tamamlandı",
-    "highlight": true
+    "highlight": true,
+    "demo_url": ""
   },
   {
     "id": 3,
@@ -32,12 +60,27 @@
     "subtitle": "FPGA Üzerinde Pixel Seviyesi Grafik Kontrolcüsü",
     "description": "VHDL ile tasarlanmış 640x480@60Hz VGA sinyali üreten grafik kontrolcüsü. Yatay/dikey senkronizasyon zamanlama üreteci, renk paletleri ve basit sprite render motoru içermektedir.",
     "category": "FPGA / VHDL",
-    "tags": ["VHDL", "VGA", "FPGA", "Grafik", "Timing", "FSM"],
-    "hardware": ["Digilent Nexys A7", "VGA Monitör"],
-    "software": ["Vivado", "VHDL", "ModelSim"],
+    "tags": [
+      "VHDL",
+      "VGA",
+      "FPGA",
+      "Grafik",
+      "Timing",
+      "FSM"
+    ],
+    "hardware": [
+      "Digilent Nexys A7",
+      "VGA Monitör"
+    ],
+    "software": [
+      "Vivado",
+      "VHDL",
+      "ModelSim"
+    ],
     "github_url": "https://github.com/kullanici-adiniz/vga-controller-fpga",
     "status": "Tamamlandı",
-    "highlight": false
+    "highlight": false,
+    "demo_url": ""
   },
   {
     "id": 4,
@@ -45,12 +88,26 @@
     "subtitle": "Dijital PWM ile DC Motor Hız Kontrolü",
     "description": "FPGA tabanlı, VHDL ile yazılmış, ayarlanabilir frekans ve duty cycle destekleyen PWM sinyal üreticisi. H-köprüsü entegrasyonu ile DC motor yönü ve hız kontrolü sağlar.",
     "category": "FPGA / Gömülü",
-    "tags": ["VHDL", "PWM", "Motor Kontrolü", "H-Köprüsü", "FPGA"],
-    "hardware": ["FPGA Geliştirme Kartı", "L298N H-Köprüsü", "DC Motor"],
-    "software": ["Vivado", "VHDL"],
+    "tags": [
+      "VHDL",
+      "PWM",
+      "Motor Kontrolü",
+      "H-Köprüsü",
+      "FPGA"
+    ],
+    "hardware": [
+      "FPGA Geliştirme Kartı",
+      "L298N H-Köprüsü",
+      "DC Motor"
+    ],
+    "software": [
+      "Vivado",
+      "VHDL"
+    ],
     "github_url": "https://github.com/kullanici-adiniz/pwm-motor-driver",
     "status": "Tamamlandı",
-    "highlight": false
+    "highlight": false,
+    "demo_url": ""
   },
   {
     "id": 5,
@@ -58,11 +115,23 @@
     "subtitle": "Yeniden Kullanılabilir Analitik Arayüz Kütüphanesi",
     "description": "Mühendislik ve veri bilimi projeleri için hazırlanmış, modüler bileşenler içeren Streamlit dashboard şablon kütüphanesi. Plotly entegrasyonu, koyu tema ve responsive tasarım içerir.",
     "category": "Python / Web",
-    "tags": ["Python", "Streamlit", "Plotly", "Dashboard", "UI/UX"],
+    "tags": [
+      "Python",
+      "Streamlit",
+      "Plotly",
+      "Dashboard",
+      "UI/UX"
+    ],
     "hardware": [],
-    "software": ["Python", "Streamlit", "Plotly", "Pandas"],
+    "software": [
+      "Python",
+      "Streamlit",
+      "Plotly",
+      "Pandas"
+    ],
     "github_url": "https://github.com/kullanici-adiniz/streamlit-dashboard-template",
     "status": "Aktif",
-    "highlight": false
+    "highlight": false,
+    "demo_url": ""
   }
 ]
