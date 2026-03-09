@@ -611,9 +611,10 @@ elif page == NAV[2]:
             hw_html  = f'<div style="margin-top:0.5rem;">{hw_items}</div>'
 
         s = proj.get("status", "")
-        dot_cls = "status-active" if s in ("Aktif", "Aktif Geliştirme") else "status-done"
+        is_active = s in ("Aktif", "Aktif Geliştirme")
+        dot_color = "#00ff88" if is_active else "#6b7a99"
+        dot_shadow = f"0 0 6px {dot_color}" if is_active else "none"
 
-        # Kart HTML'i parçalar halinde birleştir (f-string iç içe sorununu önler)
         card_html = (
             '<div class="project-card">' +
             f'<div class="card-category">{proj["category"]}</div>' +
@@ -622,13 +623,27 @@ elif page == NAV[2]:
             f'<div class="card-desc">{proj["description"]}</div>' +
             f'<div class="tag-row">{tag_html}</div>' +
             hw_html +
-            '<div style="margin-top:1rem;display:flex;align-items:center;">' +
-            f'<span class="status-dot {dot_cls}"></span>' +
-            f'<span class="status-text">{s}</span>' +
+            '<div style="margin-top:1rem;display:flex;align-items:center;gap:0.5rem;">' +
+            f'<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:{dot_color};box-shadow:{dot_shadow};"></span>' +
+            f'<span style="font-family:Space Mono,monospace;font-size:0.7rem;color:#6b7a99;">{s}</span>' +
             '</div></div>'
         )
         st.markdown(card_html, unsafe_allow_html=True)
-        st.link_button("GitHub'da İncele →", proj["github_url"])
+
+        # Buton satırı
+        github_url = proj.get("github_url", "")
+        demo_url   = proj.get("demo_url", "")
+
+        if demo_url and github_url:
+            b1, b2 = st.columns(2)
+            with b1:
+                st.link_button("🔗 Projeyi İncele", demo_url, use_container_width=True)
+            with b2:
+                st.link_button("🐙 GitHub'da Gör", github_url, use_container_width=True)
+        elif demo_url:
+            st.link_button("🔗 Projeyi İncele", demo_url, use_container_width=True)
+        elif github_url:
+            st.link_button("🐙 GitHub'da Gör", github_url, use_container_width=True)
 
     if featured:
         st.markdown("**⭐ Öne Çıkan Projeler**")
