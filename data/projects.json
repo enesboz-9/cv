@@ -21,35 +21,27 @@
       "Streamlit",
       "yfinance / BIST API"
     ],
-    "github_url": "https://github.com/enesboz-9",
+    "github_url": "https://github.com/enesboz-9/news.app",
     "status": "Aktif Geliştirme",
     "highlight": true,
-    "demo_url": "https://liicwet2rsxjrxjmtbvt5w.streamlit.app/"
+    "demo_url": "https://newsapp-nbjpwfaw7ezfvappvzkj2iy.streamlit.app/"
   },
   {
     "id": 2,
-    "title": "FPGA UART Haberleşme Modülü",
-    "subtitle": "VHDL ile Tasarlanmış Seri İletişim Çekirdeği",
-    "description": "Xilinx Artix-7 FPGA üzerinde VHDL ile implemente edilmiş, yapılandırılabilir baud hızı destekleyen, FIFO tamponlu tam çift yönlü UART haberleşme çekirdeği. Vivado ile sentezlenip FPGA'ya yüklenmiştir.",
-    "category": "FPGA / VHDL",
+    "title": "AI Destekli Akıllı Haber Platformu",
+    "subtitle": "AI destekli güncel olarak veri çeken çeşitli özelliklerle güçlendirilmiş haber sitesi",
+    "description": "API kullanılarak AI özellikleri entegre edilmiş modern bir web sitesi",
+    "category": "AI / Python",
     "tags": [
-      "VHDL",
-      "FPGA",
-      "UART",
-      "Xilinx",
-      "Vivado",
-      "RTL Tasarım"
+      "AI",
+      "Python",
+      "Web"
     ],
-    "hardware": [
-      "Xilinx Artix-7 (Basys 3)",
-      "USB-UART Köprü"
-    ],
+    
     "software": [
-      "Vivado 2023.2",
-      "ModelSim",
-      "VHDL-2008"
+      "Python"
     ],
-    "github_url": "https://github.com/kullanici-adiniz/fpga-uart-core",
+    "github_url": "",
     "status": "Tamamlandı",
     "highlight": true,
     "demo_url": ""
