@@ -369,7 +369,7 @@ if page == NAV[0]:
         <div class="hero-tag" style="margin-top:2rem;">// Elektrik-Elektronik Mühendisi</div>
         <h1 class="hero-name">Enes <span>BOZ</span></h1>
         <p class="hero-subtitle">
-            FPGA Tasarım · Gömülü Sistemler · Python Geliştirme · Borsa Analiz Araçları
+            Web tasarım & Mobil Uygulama Geliştirme · FPGA Tasarım \ Gömülü Sistemler · Yazılım Geliştirme · Borsa-Finans Analiz Araçları
         </p>
         <div class="hero-badges">
             <span class="badge badge-cyan">VHDL / Vivado</span>
@@ -482,7 +482,7 @@ if page == NAV[0]:
 
     categories = ["VHDL/RTL", "FPGA Tasarım", "Python", "Veri Analizi",
                   "Gömülü Sistemler", "Borsa Analizi", "Streamlit/UI"]
-    values     = [90, 85, 88, 80, 78, 82, 85]
+    values     = [60, 65, 78, 80, 58, 82, 85]
 
     fig = go.Figure(go.Scatterpolar(
         r=values + [values[0]],
@@ -523,11 +523,9 @@ elif page == NAV[1]:
                     letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;">
             ⬡ FPGA / VHDL
         </div>""", unsafe_allow_html=True)
-        skill_bar("VHDL-2008", 90, "cyan")
-        skill_bar("Xilinx Vivado", 85, "cyan")
-        skill_bar("ModelSim (Simülasyon)", 80, "cyan")
-        skill_bar("RTL Tasarım / FSM", 88, "cyan")
-        skill_bar("Timing Analiz (STA)", 72, "cyan")
+        skill_bar("VHDL", 60, "cyan")
+        skill_bar("Xilinx Vivado", 60, "cyan")
+       
 
     with col_b:
         st.markdown("""
@@ -535,9 +533,9 @@ elif page == NAV[1]:
                     letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;">
             ⬡ Python / Yazılım
         </div>""", unsafe_allow_html=True)
-        skill_bar("Python 3.x", 90, "green")
-        skill_bar("Pandas / NumPy", 85, "green")
-        skill_bar("Plotly / Matplotlib", 82, "green")
+        skill_bar("Python ", 70, "green")
+        skill_bar("Pandas / NumPy", 70, "green")
+        skill_bar("Plotly / Matplotlib", 72, "green")
         skill_bar("Streamlit", 88, "green")
         skill_bar("REST API Entegrasyonu", 75, "green")
 
@@ -548,7 +546,7 @@ elif page == NAV[1]:
             ⬡ Borsa Analizi
         </div>""", unsafe_allow_html=True)
         skill_bar("Teknik Analiz", 80, "amber")
-        skill_bar("RSI / MACD / BB", 78, "amber")
+        skill_bar("Finans Bilgisi", 78, "amber")
         skill_bar("BIST Veri API", 75, "amber")
         skill_bar("Backtest Geliştirme", 65, "amber")
         skill_bar("Veri Görselleştirme", 85, "amber")
