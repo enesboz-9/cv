@@ -369,7 +369,7 @@ if page == NAV[0]:
         <div class="hero-tag" style="margin-top:2rem;">// Elektrik-Elektronik Mühendisi</div>
         <h1 class="hero-name">Enes <span>BOZ</span></h1>
         <p class="hero-subtitle">
-            Web tasarım & Mobil Uygulama Geliştirme · FPGA Tasarım \ Gömülü Sistemler · Yazılım Geliştirme · Borsa-Finans Analiz Araçları
+            FPGA Tasarım · Gömülü Sistemler · Python Geliştirme · Borsa Analiz Araçları
         </p>
         <div class="hero-badges">
             <span class="badge badge-cyan">VHDL / Vivado</span>
@@ -482,7 +482,7 @@ if page == NAV[0]:
 
     categories = ["VHDL/RTL", "FPGA Tasarım", "Python", "Veri Analizi",
                   "Gömülü Sistemler", "Borsa Analizi", "Streamlit/UI"]
-    values     = [60, 65, 78, 80, 58, 82, 85]
+    values     = [90, 85, 88, 80, 78, 82, 85]
 
     fig = go.Figure(go.Scatterpolar(
         r=values + [values[0]],
@@ -523,9 +523,11 @@ elif page == NAV[1]:
                     letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;">
             ⬡ FPGA / VHDL
         </div>""", unsafe_allow_html=True)
-        skill_bar("VHDL", 60, "cyan")
-        skill_bar("Xilinx Vivado", 60, "cyan")
-       
+        skill_bar("VHDL-2008", 90, "cyan")
+        skill_bar("Xilinx Vivado", 85, "cyan")
+        skill_bar("ModelSim (Simülasyon)", 80, "cyan")
+        skill_bar("RTL Tasarım / FSM", 88, "cyan")
+        skill_bar("Timing Analiz (STA)", 72, "cyan")
 
     with col_b:
         st.markdown("""
@@ -533,9 +535,9 @@ elif page == NAV[1]:
                     letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;">
             ⬡ Python / Yazılım
         </div>""", unsafe_allow_html=True)
-        skill_bar("Python ", 70, "green")
-        skill_bar("Pandas / NumPy", 70, "green")
-        skill_bar("Plotly / Matplotlib", 72, "green")
+        skill_bar("Python 3.x", 90, "green")
+        skill_bar("Pandas / NumPy", 85, "green")
+        skill_bar("Plotly / Matplotlib", 82, "green")
         skill_bar("Streamlit", 88, "green")
         skill_bar("REST API Entegrasyonu", 75, "green")
 
@@ -546,7 +548,7 @@ elif page == NAV[1]:
             ⬡ Borsa Analizi
         </div>""", unsafe_allow_html=True)
         skill_bar("Teknik Analiz", 80, "amber")
-        skill_bar("Finans Bilgisi", 78, "amber")
+        skill_bar("RSI / MACD / BB", 78, "amber")
         skill_bar("BIST Veri API", 75, "amber")
         skill_bar("Backtest Geliştirme", 65, "amber")
         skill_bar("Veri Görselleştirme", 85, "amber")
@@ -607,20 +609,25 @@ elif page == NAV[2]:
         if proj.get("hardware"):
             hw_items = " ".join(f'<span class="tag tag-green">{h}</span>' for h in proj["hardware"])
             hw_html  = f'<div style="margin-top:0.5rem;">{hw_items}</div>'
-        status = status_html(proj.get("status", ""))
 
-        st.markdown(f"""
-        <div class="project-card">
-            <div class="card-category">{proj["category"]}</div>
-            <div class="card-title">{proj["title"]}</div>
-            <div class="card-subtitle">{proj["subtitle"]}</div>
-            <div class="card-desc">{proj["description"]}</div>
-            <div class="tag-row">{tag_html}</div>
-            {hw_html}
-            <div style="margin-top:1rem;display:flex;align-items:center;justify-content:space-between;">
-                {status}
-            </div>
-        </div>""", unsafe_allow_html=True)
+        s = proj.get("status", "")
+        dot_cls = "status-active" if s in ("Aktif", "Aktif Geliştirme") else "status-done"
+
+        # Kart HTML'i parçalar halinde birleştir (f-string iç içe sorununu önler)
+        card_html = (
+            '<div class="project-card">' +
+            f'<div class="card-category">{proj["category"]}</div>' +
+            f'<div class="card-title">{proj["title"]}</div>' +
+            f'<div class="card-subtitle">{proj["subtitle"]}</div>' +
+            f'<div class="card-desc">{proj["description"]}</div>' +
+            f'<div class="tag-row">{tag_html}</div>' +
+            hw_html +
+            '<div style="margin-top:1rem;display:flex;align-items:center;">' +
+            f'<span class="status-dot {dot_cls}"></span>' +
+            f'<span class="status-text">{s}</span>' +
+            '</div></div>'
+        )
+        st.markdown(card_html, unsafe_allow_html=True)
         st.link_button("GitHub'da İncele →", proj["github_url"])
 
     if featured:
