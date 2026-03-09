@@ -11,13 +11,13 @@
   },
   {
     "id": 2,
-    "title": "Python for Data Science and AI",
-    "issuer": "IBM / Coursera",
-    "date": "2024",
-    "category": "Python/Yazılım",
-    "credential_url": "https://coursera.org/verify/YYYY",
+    "title": "Borusan Teknoloji Okulu",
+    "issuer": "BORUSAN",
+    "date": "2025",
+    "category": "Otomotiv/Yazılım/Yenilenebilir Enerji",
+    "credential_url": "https://toptalent.co/businessschool/dogrulama/",
     "image_file": "cert_python_ibm.png",
-    "description": "Pandas, NumPy, veri görselleştirme ve makine öğrenmesi temelleri"
+    "description": "Sektöre genel bakış."
   },
   {
     "id": 3,
