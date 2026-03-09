@@ -1,5 +1,5 @@
 """
-Elektrik-Elektronik Mühendisi ENES boz  Portfolyo 
+Elektrik-Elektronik Mühendisi Portfolyo Sitesi
 Streamlit Cloud üzerinde yayınlanmak üzere tasarlanmıştır.
 """
 
@@ -314,7 +314,7 @@ def skill_bar(label: str, pct: int, color: str = "cyan"):
     )
     st.markdown(f"""
     <div class="skill-block">
-        <div class="skill-label">{label} <span style="float:right;color:#6b7a99">{pct}%</span></div>
+        <div class="skill-label">{label}</div>
         <div class="skill-bar-bg">
             <div class="skill-bar-fill" style="width:{pct}%;background:{gradient}"></div>
         </div>
@@ -355,9 +355,45 @@ st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 # ═══════════════════════════════════════════
 if page == NAV[0]:
 
-    # Hero
-    st.markdown("""
+    # Hero – profil fotoğrafı
+    import base64
+    profile_b64, profile_mime = "", "image/jpeg"
+    for fname, mime in [("profile.jpg","image/jpeg"),("profile.jpeg","image/jpeg"),("profile.png","image/png")]:
+        p = BASE / "assets" / fname
+        if p.exists():
+            with open(p, "rb") as f:
+                profile_b64 = base64.b64encode(f.read()).decode()
+            profile_mime = mime
+            break
+
+    if profile_b64:
+        photo_html = f"""
+        <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+            <div style="width:140px;height:140px;border-radius:50%;
+                        border:3px solid rgba(0,212,255,0.5);
+                        box-shadow:0 0 30px rgba(0,212,255,0.2);
+                        overflow:hidden;">
+                <img src="data:{profile_mime};base64,{profile_b64}"
+                     style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+        </div>"""
+    else:
+        photo_html = """
+        <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+            <div style="width:140px;height:140px;border-radius:50%;
+                        border:2px dashed rgba(0,212,255,0.3);
+                        display:flex;align-items:center;justify-content:center;
+                        background:var(--bg-card);flex-direction:column;gap:0.3rem;">
+                <span style="font-size:2.5rem;">👤</span>
+                <span style="font-family:'Space Mono';font-size:0.55rem;color:#3a4a66;text-align:center;">
+                    assets/profile.jpg
+                </span>
+            </div>
+        </div>"""
+
+    st.markdown(f"""
     <div class="hero-wrapper">
+        {photo_html}
         <div class="hero-tag">// Elektrik-Elektronik Mühendisi</div>
         <h1 class="hero-name">Ad <span>Soyad</span></h1>
         <p class="hero-subtitle">
