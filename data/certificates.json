@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "FPGA Design with VHDL",
+    "issuer": "Coursera / UC San Diego",
+    "date": "2024",
+    "category": "FPGA/Donanım",
+    "credential_url": "https://coursera.org/verify/XXXX",
+    "image_file": "cert_fpga_vhdl.png",
+    "description": "RTL tasarım metodolojisi, sentez ve FPGA implementasyonu"
+  },
+  {
+    "id": 2,
+    "title": "Python for Data Science and AI",
+    "issuer": "IBM / Coursera",
+    "date": "2024",
+    "category": "Python/Yazılım",
+    "credential_url": "https://coursera.org/verify/YYYY",
+    "image_file": "cert_python_ibm.png",
+    "description": "Pandas, NumPy, veri görselleştirme ve makine öğrenmesi temelleri"
+  },
+  {
+    "id": 3,
+    "title": "Embedded Systems Design",
+    "issuer": "Udemy",
+    "date": "2023",
+    "category": "Gömülü Sistemler",
+    "credential_url": "https://udemy.com/certificate/ZZZZ",
+    "image_file": "cert_embedded.png",
+    "description": "ARM Cortex-M mikrodenetleyici programlama ve gerçek zamanlı sistemler"
+  }
+]
