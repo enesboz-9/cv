@@ -17,16 +17,16 @@
     "category": "Otomotiv/Yazılım/Yenilenebilir Enerji",
     "credential_url": "https://toptalent.co/businessschool/dogrulama/",
     "image_file": "Ekran görüntüsü 2026-03-09 173008.png",
-    "description": "Sektöre genel bakış. Doğrulama anahtarı:  921359-175-200-3894"
+    "description": "Sektöre genel bakış. Doğrulama anahtarı: 921359-175-200-3894"
   },
   {
     "id": 3,
-    "title": "Embedded Systems Design",
-    "issuer": "Udemy",
-    "date": "2023",
-    "category": "Gömülü Sistemler",
-    "credential_url": "https://udemy.com/certificate/ZZZZ",
-    "image_file": "cert_embedded.png",
-    "description": "ARM Cortex-M mikrodenetleyici programlama ve gerçek zamanlı sistemler"
+    "title": "Yapay Zeka Eğitimi",
+    "issuer": "ODTÜ",
+    "date": "2025",
+    "category": "Yapay Zeka",
+    "credential_url": "https://bilgeis.net/",
+    "image_file": "Ekran görüntüsü 2026-03-09 175048",
+    "description": "Yapay Zeka Üzerine Eğitim. Doğrulama anahtarı:  c834ab30-f628-11ef-9604-915bc57cf948"
   }
 ]
