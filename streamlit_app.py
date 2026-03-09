@@ -355,45 +355,18 @@ st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 # ═══════════════════════════════════════════
 if page == NAV[0]:
 
-    # Hero – profil fotoğrafı
-    import base64
-    profile_b64, profile_mime = "cv foto.jpeg", "cv foto.jpeg"
-    for fname, mime in [("profile.jpg","image/jpeg"),("profile.jpeg","image/jpeg"),("profile.png","image/png")]:
+    # Hero – profil fotoğrafı (st.image ile güvenli yöntem)
+    profile_found = False
+    profile_path = None
+    for fname in ["profile.jpg", "profile.jpeg", "profile.png"]:
         p = BASE / "assets" / fname
         if p.exists():
-            with open(p, "rb") as f:
-                profile_b64 = base64.b64encode(f.read()).decode()
-            profile_mime = mime
+            profile_found = True
+            profile_path = str(p)
             break
 
-    # Profil fotoğrafını ayrı render et (f-string CSS çakışmasını önlemek için)
-    st.markdown('<div class="hero-wrapper">', unsafe_allow_html=True)
-
-    if profile_b64:
-        st.markdown(
-            f'<div style="display:flex;justify-content:center;margin-bottom:1.5rem;">' +
-            f'<div style="width:140px;height:140px;border-radius:50%;' +
-            f'border:3px solid rgba(0,212,255,0.5);box-shadow:0 0 30px rgba(0,212,255,0.2);overflow:hidden;">' +
-            f'<img src="data:{profile_mime};base64,{profile_b64}" style="width:100%;height:100%;object-fit:cover;"/>' +
-            '</div></div>',
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown("""
-        <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-            <div style="width:140px;height:140px;border-radius:50%;
-                        border:2px dashed rgba(0,212,255,0.3);
-                        display:flex;align-items:center;justify-content:center;
-                        background:#141c2e;flex-direction:column;gap:0.3rem;">
-                <span style="font-size:2.5rem;">&#128100;</span>
-                <span style="font-family:'Space Mono';font-size:0.55rem;color:#3a4a66;text-align:center;">
-                    assets/profile.jpg
-                </span>
-            </div>
-        </div>""", unsafe_allow_html=True)
-
     st.markdown("""
-        <div class="hero-tag">// Elektrik-Elektronik Mühendisi</div>
+        <div class="hero-tag" style="margin-top:2rem;">// Elektrik-Elektronik Mühendisi</div>
         <h1 class="hero-name">Enes <span>BOZ</span></h1>
         <p class="hero-subtitle">
             FPGA Tasarım · Gömülü Sistemler · Python Geliştirme · Borsa Analiz Araçları
@@ -405,7 +378,36 @@ if page == NAV[0]:
             <span class="badge badge-cyan">STM32</span>
             <span class="badge badge-green">Web & Mobil</span>
         </div>
-    </div>""", unsafe_allow_html=True)
+        <br>
+    """, unsafe_allow_html=True)
+
+    if profile_found:
+        # Ortada yuvarlak görünen profil için CSS trick
+        col_l, col_m, col_r = st.columns([2, 1, 2])
+        with col_m:
+            st.markdown("""
+            <style>
+            [data-testid="stImage"] img {
+                border-radius: 50% !important;
+                border: 3px solid rgba(0,212,255,0.5) !important;
+                box-shadow: 0 0 30px rgba(0,212,255,0.25) !important;
+                object-fit: cover !important;
+                aspect-ratio: 1/1 !important;
+            }
+            </style>""", unsafe_allow_html=True)
+            st.image(profile_path, use_container_width=True)
+    else:
+        col_l, col_m, col_r = st.columns([2, 1, 2])
+        with col_m:
+            st.markdown("""
+            <div style="width:100%;aspect-ratio:1/1;border-radius:50%;
+                        border:2px dashed rgba(0,212,255,0.3);
+                        display:flex;align-items:center;justify-content:center;
+                        background:#141c2e;flex-direction:column;gap:0.3rem;">
+                <span style="font-size:2.5rem;">&#128100;</span>
+                <span style="font-family:'Space Mono';font-size:0.55rem;
+                             color:#3a4a66;text-align:center;">assets/profile.jpg</span>
+            </div>""", unsafe_allow_html=True)
 
     # Hakkımda özet
     col1, col2 = st.columns([3, 2], gap="large")
