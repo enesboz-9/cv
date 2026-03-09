@@ -366,34 +366,33 @@ if page == NAV[0]:
             profile_mime = mime
             break
 
+    # Profil fotoğrafını ayrı render et (f-string CSS çakışmasını önlemek için)
+    st.markdown('<div class="hero-wrapper">', unsafe_allow_html=True)
+
     if profile_b64:
-        photo_html = f"""
-        <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-            <div style="width:140px;height:140px;border-radius:50%;
-                        border:3px solid rgba(0,212,255,0.5);
-                        box-shadow:0 0 30px rgba(0,212,255,0.2);
-                        overflow:hidden;">
-                <img src="data:{profile_mime};base64,{profile_b64}"
-                     style="width:100%;height:100%;object-fit:cover;" />
-            </div>
-        </div>"""
+        st.markdown(
+            f'<div style="display:flex;justify-content:center;margin-bottom:1.5rem;">' +
+            f'<div style="width:140px;height:140px;border-radius:50%;' +
+            f'border:3px solid rgba(0,212,255,0.5);box-shadow:0 0 30px rgba(0,212,255,0.2);overflow:hidden;">' +
+            f'<img src="data:{profile_mime};base64,{profile_b64}" style="width:100%;height:100%;object-fit:cover;"/>' +
+            '</div></div>',
+            unsafe_allow_html=True
+        )
     else:
-        photo_html = """
+        st.markdown("""
         <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
             <div style="width:140px;height:140px;border-radius:50%;
                         border:2px dashed rgba(0,212,255,0.3);
                         display:flex;align-items:center;justify-content:center;
-                        background:var(--bg-card);flex-direction:column;gap:0.3rem;">
-                <span style="font-size:2.5rem;">👤</span>
+                        background:#141c2e;flex-direction:column;gap:0.3rem;">
+                <span style="font-size:2.5rem;">&#128100;</span>
                 <span style="font-family:'Space Mono';font-size:0.55rem;color:#3a4a66;text-align:center;">
                     assets/profile.jpg
                 </span>
             </div>
-        </div>"""
+        </div>""", unsafe_allow_html=True)
 
-    st.markdown(f"""
-    <div class="hero-wrapper">
-        {photo_html}
+    st.markdown("""
         <div class="hero-tag">// Elektrik-Elektronik Mühendisi</div>
         <h1 class="hero-name">Enes <span>BOZ</span></h1>
         <p class="hero-subtitle">
@@ -406,8 +405,7 @@ if page == NAV[0]:
             <span class="badge badge-cyan">STM32</span>
             <span class="badge badge-green">Web & Mobil</span>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+    </div>""", unsafe_allow_html=True)
 
     # Hakkımda özet
     col1, col2 = st.columns([3, 2], gap="large")
