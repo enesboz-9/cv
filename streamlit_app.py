@@ -357,7 +357,7 @@ if page == NAV[0]:
 
     # Hero – profil fotoğrafı
     import base64
-    profile_b64, profile_mime = "cv foto.jpeg", "image/jpeg"
+    profile_b64, profile_mime = "cv foto.jpeg", "cv foto.jpeg"
     for fname, mime in [("profile.jpg","image/jpeg"),("profile.jpeg","image/jpeg"),("profile.png","image/png")]:
         p = BASE / "assets" / fname
         if p.exists():
