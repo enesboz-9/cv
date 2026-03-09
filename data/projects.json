@@ -21,10 +21,10 @@
       "Streamlit",
       "yfinance / BIST API"
     ],
-    "github_url": "https://github.com/enesboz-9/news.app",
+    "github_url": "https://github.com/enesboz-9/bist",
     "status": "Aktif Geliştirme",
     "highlight": true,
-    "demo_url": "https://newsapp-nbjpwfaw7ezfvappvzkj2iy.streamlit.app/"
+    "demo_url": "https://liicwet2rsxjrxjmtbvt5w.streamlit.app/"
   },
   {
     "id": 2,
@@ -41,10 +41,10 @@
     "software": [
       "Python"
     ],
-    "github_url": "",
+    "github_url": "https://github.com/enesboz-9/news.app",
     "status": "Tamamlandı",
     "highlight": true,
-    "demo_url": ""
+    "demo_url": "https://newsapp-nbjpwfaw7ezfvappvzkj2iy.streamlit.app/"
   },
   {
     "id": 3,
