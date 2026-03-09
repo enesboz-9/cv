@@ -15,7 +15,7 @@ import pandas as pd
 #  SAYFA AYARLARI
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Enes BOZ | Elektrik Elektronik Mühendisi",
+    page_title="Adınız | EE Mühendisi",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -395,7 +395,7 @@ if page == NAV[0]:
     <div class="hero-wrapper">
         {photo_html}
         <div class="hero-tag">// Elektrik-Elektronik Mühendisi</div>
-        <h1 class="hero-name">Ad <span>Soyad</span></h1>
+        <h1 class="hero-name">Enes <span>BOZ</span></h1>
         <p class="hero-subtitle">
             FPGA Tasarım · Gömülü Sistemler · Python Geliştirme · Borsa Analiz Araçları
         </p>
@@ -403,8 +403,8 @@ if page == NAV[0]:
             <span class="badge badge-cyan">VHDL / Vivado</span>
             <span class="badge badge-green">Python / Streamlit</span>
             <span class="badge badge-amber">Borsa Analizi</span>
-            <span class="badge badge-cyan">RTL Tasarım</span>
-            <span class="badge badge-green">Gömülü Linux</span>
+            <span class="badge badge-cyan">STM32</span>
+            <span class="badge badge-green">Web & Mobil</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -416,36 +416,63 @@ if page == NAV[0]:
                     unsafe_allow_html=True)
         st.markdown("""
         <p style="color:#9aa3b8;line-height:1.8;font-size:0.95rem;">
-        Elektrik-Elektronik Mühendisliği alanında FPGA/VHDL donanım tasarımı ve Python tabanlı
-        yazılım geliştirme konularında uzmanlaşmış bir mühendisim. Xilinx Vivado ekosisteminde
-        RTL tasarım, sentez ve fiziksel implementasyon süreçlerinde deneyimliyim.
+        Genç yaşlardan itibaren farklı sektörlerde deneyim kazanarak çok yönlü bir bakış açısı
+        geliştirmiş, sorumluluk almaktan çekinmeyen ve proaktif yaklaşımı benimsemiş bir
+        profesyonelim. Güçlü liderlik özelliklerim ve ekip çalışmasına yatkınlığım sayesinde
+        projelerde sonuç odaklı hareket eder, her görevde sürekli gelişimi ve yüksek kaliteyi hedeflerim.
         </p>
         <p style="color:#9aa3b8;line-height:1.8;font-size:0.95rem;margin-top:0.75rem;">
-        Yazılım tarafında ise Python ile veri odaklı uygulamalar ve özellikle
-        <strong style="color:#00d4ff">BIST Analiz Terminali</strong> gibi fintech araçları
-        geliştiriyorum. Streamlit ekosistemini kullanarak teknik analizleri interaktif
-        web arayüzlerine dönüştürüyorum.
+        Keskin gözlem yeteneğim ve analitik düşünme becerimle, karmaşık problemlere yenilikçi
+        çözümler üretmekten heyecan duyarım. Mühendislik disiplinimin yanı sıra finans, ekonomi
+        ve girişimcilik alanlarına duyduğum derin ilgiyle, bu alanlardaki bilgi birikimimi sürekli
+        genişleterek <strong style="color:#00d4ff">disiplinler arası bir yetkinlik</strong> sunmayı amaçlıyorum.
         </p>
         """, unsafe_allow_html=True)
 
-    with col2:
-        st.markdown('<div class="section-header">Hızlı Bakış<small>// QUICK STATS</small></div>',
+        st.markdown('<div class="section-header" style="font-size:1.1rem;margin-top:1.5rem;">Eğitim<small>// EDUCATION</small></div>',
                     unsafe_allow_html=True)
+        st.markdown("""
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:4px;
+                    padding:1rem 1.25rem;display:flex;align-items:flex-start;gap:1rem;">
+            <span style="font-size:1.6rem;">🎓</span>
+            <div>
+                <div style="font-family:'Syne';font-size:0.95rem;font-weight:600;color:var(--text-primary);">
+                    Marmara Üniversitesi
+                </div>
+                <div style="font-size:0.82rem;color:#00d4ff;margin:0.2rem 0;">
+                    Electrical and Electronics Engineering (English)
+                </div>
+                <div style="font-family:'Space Mono';font-size:0.72rem;color:var(--text-muted);">
+                    3. Sınıf · Devam Ediyor
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
-        stats = {
-            "⚡ FPGA Projesi": "4+",
-            "🐍 Python Projesi": "6+",
-            "📐 VHDL Modülü": "10+",
-            "🎓 Sertifika": "3",
-        }
-        for label, val in stats.items():
+    with col2:
+        st.markdown('<div class="section-header">Teknolojiler<small>// TECH STACK</small></div>',
+                    unsafe_allow_html=True)
+        techs = [
+            ("⚡", "C",                     "cyan"),
+            ("☕", "Java",                  "green"),
+            ("🔲", "VHDL",                  "cyan"),
+            ("🐍", "Python",                "green"),
+            ("🔧", "STM32",                 "amber"),
+            ("📊", "Office Programs",       "green"),
+            ("🌐", "Web Design",            "cyan"),
+            ("📱", "Mobile App Development","amber"),
+        ]
+        color_map = {"cyan":"#00d4ff","green":"#00ff88","amber":"#ffb703"}
+        for icon, name, color in techs:
+            c = color_map[color]
             st.markdown(f"""
-            <div style="display:flex;justify-content:space-between;align-items:center;
-                        padding:0.6rem 1rem;background:var(--bg-card);
-                        border:1px solid var(--border);border-radius:4px;margin-bottom:0.5rem;">
-                <span style="font-size:0.85rem;color:#9aa3b8;">{label}</span>
-                <span style="font-family:'Space Mono',monospace;font-size:1.1rem;
-                             color:#00d4ff;font-weight:700;">{val}</span>
+            <div style="display:flex;align-items:center;gap:0.75rem;
+                        padding:0.55rem 1rem;background:var(--bg-card);
+                        border:1px solid var(--border);border-radius:4px;margin-bottom:0.4rem;">
+                <span style="font-size:1rem;">{icon}</span>
+                <span style="font-size:0.85rem;color:#9aa3b8;flex:1;">{name}</span>
+                <span style="width:8px;height:8px;border-radius:50%;
+                             background:{c};box-shadow:0 0 6px {c};"></span>
             </div>""", unsafe_allow_html=True)
 
     # Radar grafik – uzmanlık alanları
@@ -482,7 +509,7 @@ if page == NAV[0]:
 
 
 # ═══════════════════════════════════════════
-#  SAYFA: YETENEKLER
+#  SAYFA: YETENEKler
 # ═══════════════════════════════════════════
 elif page == NAV[1]:
     st.markdown('<div class="section-header">Teknik Yetenekler<small>// TECHNICAL SKILLS</small></div>',
@@ -678,9 +705,9 @@ elif page == NAV[4]:
     col1, col2 = st.columns([2, 1], gap="large")
     with col1:
         contacts = [
-            ("📧", "E-posta", "adsoyadiniz@gmail.com", "mailto:adsoyadiniz@gmail.com"),
-            ("💼", "LinkedIn", "linkedin.com/in/kullanici-adiniz", "https://linkedin.com/in/kullanici-adiniz"),
-            ("🐙", "GitHub",   "github.com/kullanici-adiniz",      "https://github.com/kullanici-adiniz"),
+            ("📧", "E-posta", "enesboz446@gmail.com", "mailto:enesboz446@gmail.com"),
+            ("💼", "LinkedIn", "linkedin.com/in/enesboz", "https://linkedin.com/in/enesboz"),
+            ("🐙", "GitHub",   "github.com/enesboz-9",    "https://github.com/enesboz-9"),
         ]
         for icon, label, display, url in contacts:
             st.markdown(f"""
