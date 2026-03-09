@@ -1,5 +1,5 @@
 """
-Elektrik-Elektronik Mühendisi Portfolyo Sitesi
+Elektrik-Elektronik Mühendisi ENES boz  Portfolyo 
 Streamlit Cloud üzerinde yayınlanmak üzere tasarlanmıştır.
 """
 
@@ -15,7 +15,7 @@ import pandas as pd
 #  SAYFA AYARLARI
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Adınız | EE Mühendisi",
+    page_title="Enes BOZ | Elektrik Elektronik Mühendisi",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -446,7 +446,7 @@ if page == NAV[0]:
 
 
 # ═══════════════════════════════════════════
-#  SAYFA: YETENEKler
+#  SAYFA: YETENEKLER
 # ═══════════════════════════════════════════
 elif page == NAV[1]:
     st.markdown('<div class="section-header">Teknik Yetenekler<small>// TECHNICAL SKILLS</small></div>',
