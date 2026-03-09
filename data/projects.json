@@ -8,7 +8,8 @@
     "tags": ["Python", "Pandas", "Plotly", "Streamlit", "REST API", "Teknik Analiz"],
     "hardware": [],
     "software": ["Python 3.11", "Pandas", "Plotly", "Streamlit", "yfinance / BIST API"],
-    "github_url": "https://github.com/kullanici-adiniz/bist-analiz-terminali",
+    "github_url": "https://github.com/enesboz-9/bist",
+    "web_url": "https://liicwet2rsxjrxjmtbvt5w.streamlit.app/"
     "status": "Aktif Geliştirme",
     "highlight": true
   },
