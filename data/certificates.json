@@ -6,7 +6,7 @@
     "category": "Başarı Sertifikası",
     "description": "Yapay Zeka, Makine Öğrenmesi, Otomotiv Teknolojileri, Yazılım, Otomasyon ve Yenilenebilir Enerji konularını kapsayan 8 modül 5 saatlik eğitim programı.",
     "credential_url": "https://toptalent.co/businessschool/verify",
-    "image_file": "cert_borusan.pdf"
+    "image_file": "cert_borusan.png"
   },
   {
     "title": "Otomotiv Yaz Kampı",
@@ -24,7 +24,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_algoritma.pdf"
+    "image_file": "cert_algoritma.png"
   },
   {
     "title": "STM32 ile Gömülü Yazılım Geliştirme",
@@ -33,7 +33,7 @@
     "category": "Gömülü Sistemler",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_stm32.pdf"
+    "image_file": "cert_stm32.png"
   },
   {
     "title": "AutoCAD ile 2D Tasarımlar",
@@ -42,7 +42,7 @@
     "category": "FPGA/Donanım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_autocad.pdf"
+    "image_file": "cert_autocad.png"
   },
   {
     "title": "Bilgi Teknolojilerine Giriş",
@@ -51,7 +51,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_bilgi_teknoloji.pdf"
+    "image_file": "cert_bilgi_teknoloji.png"
   },
   {
     "title": "İkna Becerileri",
@@ -60,7 +60,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_ikna.pdf"
+    "image_file": "cert_ikna.png"
   },
   {
     "title": "Problem Çözme Teknikleri",
@@ -69,7 +69,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_problem.pdf"
+    "image_file": "cert_problem.png"
   },
   {
     "title": "Girişimcilikte Sunum Teknikleri ve İletişim Yönetimi",
@@ -78,7 +78,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_girisim_sunum.pdf"
+    "image_file": "cert_girisim_sunum.png"
   },
   {
     "title": "Tasarımların Korunması",
@@ -87,7 +87,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_tasarim.pdf"
+    "image_file": "cert_tasarim.png"
   },
   {
     "title": "Herkes için Yapay Zeka I",
@@ -96,7 +96,7 @@
     "category": "Python/Yazılım",
     "description": "AB ve Türkiye Cumhuriyeti tarafından finanse edilen EMpower projesi kapsamında çevrim içi eğitim.",
     "credential_url": "https://bilgeis.net",
-    "image_file": "cert_yapay_zeka_1.pdf"
+    "image_file": "cert_yapay_zeka_1.png"
   },
   {
     "title": "C Programlama Dili",
@@ -105,7 +105,7 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_c_prog.pdf"
+    "image_file": "cert_c_prog.png"
   },
   {
     "title": "Yapay Zekaya Giriş",
@@ -114,6 +114,6 @@
     "category": "Python/Yazılım",
     "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
     "credential_url": "https://www.btkakademi.gov.tr",
-    "image_file": "cert_yapay_zeka_giris.pdf"
+    "image_file": "cert_yapay_zeka_giris.png"
   }
 ]

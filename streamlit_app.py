@@ -564,20 +564,14 @@ elif page == NAV[2]:
 
         with col_img:
             if img_path.exists():
-                img_file = cert.get("image_file", "")
-                if img_file.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
-                    st.image(str(img_path), use_container_width=True)
-                elif img_file.lower().endswith(".pdf"):
-                    with open(str(img_path), "rb") as pdf_f:
-                        import base64
-                        b64 = base64.b64encode(pdf_f.read()).decode()
-                    st.markdown(
-                        f'''<iframe src="data:application/pdf;base64,{b64}"
-                            width="100%" height="320"
-                            style="border:1px solid rgba(0,212,255,0.2);border-radius:4px;">
-                        </iframe>''',
-                        unsafe_allow_html=True
-                    )
+                st.image(str(img_path), use_container_width=True)
+            else:
+                st.markdown(f"""
+                <div style="background:var(--bg-card);border:1px dashed rgba(0,212,255,0.2);
+                            border-radius:4px;padding:2rem;text-align:center;color:var(--text-muted);
+                            font-family:'Space Mono';font-size:0.75rem;">
+                    Görsel yüklenemedi
+                </div>""", unsafe_allow_html=True)
 
         st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 
