@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Otomotiv Yaz Kampı",
+    "issuer": "OİB",
+    "date": "2025",
+    "category": "OTOMOTİV",
+    "credential_url": "https://dogrulama.ogrencikariyeri.com/",
+    "image_file": "Ekran görüntüsü 2026-03-09 172948.png",
+    "description": "Yapay zeka eğitimine giriş. Doğrulama anahtarı: OSDFA1CD71B "
+  },
+  {
+    "id": 2,
+    "title": "Borusan Teknoloji Okulu",
+    "issuer": "BORUSAN",
+    "date": "2025",
+    "category": "Otomotiv/Yazılım/Yenilenebilir Enerji",
+    "credential_url": "https://toptalent.co/businessschool/dogrulama/",
+    "image_file": "Ekran görüntüsü 2026-03-09 173008.png",
+    "description": "Sektöre genel bakış. Doğrulama anahtarı: 921359-175-200-3894"
+  },
+  {
+    "id": 3,
+    "title": "Yapay Zeka Eğitimi",
+    "issuer": "ODTÜ",
+    "date": "2025",
+    "category": "Yapay Zeka",
+    "credential_url": "https://bilgeis.net/",
+    "image_file": "Ekran görüntüsü 2026-03-09 175048.png",
+    "description": "Yapay Zeka Üzerine Eğitim. Doğrulama anahtarı:  c834ab30-f628-11ef-9604-915bc57cf948"
+  }
+]

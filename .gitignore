@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit secrets (ASLA commit etme!)
+.streamlit/secrets.toml
+
+# Environment variables
+.env
+*.env.local
+
+# Büyük veri dosyaları
+*.csv.gz
+*.parquet
+
+# Log dosyaları
+*.log
+logs/
+
+# Geçici dosyalar
+tmp/
+temp/
