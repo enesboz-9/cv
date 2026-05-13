@@ -410,7 +410,7 @@ if page == NAV[0]:
             </div>""", unsafe_allow_html=True)
 
     # Hakkımda özet
-    col1, col2 = st.columns([3, 2], gap="large")
+    col1, _ = st.columns([3, 1], gap="large")
     with col1:
         st.markdown('<div class="section-header">Hakkımda<small>// ABOUT ME</small></div>',
                     unsafe_allow_html=True)
@@ -449,31 +449,7 @@ if page == NAV[0]:
         </div>
         """, unsafe_allow_html=True)
 
-    with col2:
-        st.markdown('<div class="section-header">Teknolojiler<small>// TECH STACK</small></div>',
-                    unsafe_allow_html=True)
-        techs = [
-            ("⚡", "C",                     "cyan"),
-            ("☕", "Java",                  "green"),
-            ("🔲", "VHDL",                  "cyan"),
-            ("🐍", "Python",                "green"),
-            ("🔧", "STM32",                 "amber"),
-            ("📊", "Office Programs",       "green"),
-            ("🌐", "Web Design",            "cyan"),
-            ("📱", "Mobile App Development","amber"),
-        ]
-        color_map = {"cyan":"#00d4ff","green":"#00ff88","amber":"#ffb703"}
-        for icon, name, color in techs:
-            c = color_map[color]
-            st.markdown(f"""
-            <div style="display:flex;align-items:center;gap:0.75rem;
-                        padding:0.55rem 1rem;background:var(--bg-card);
-                        border:1px solid var(--border);border-radius:4px;margin-bottom:0.4rem;">
-                <span style="font-size:1rem;">{icon}</span>
-                <span style="font-size:0.85rem;color:#9aa3b8;flex:1;">{name}</span>
-                <span style="width:8px;height:8px;border-radius:50%;
-                             background:{c};box-shadow:0 0 6px {c};"></span>
-            </div>""", unsafe_allow_html=True)
+
 
 
 
@@ -545,20 +521,10 @@ elif page == NAV[1]:
         elif github_url:
             st.link_button("🐙 GitHub'da Gör", github_url, use_container_width=True)
 
-    if featured:
-        st.markdown("**⭐ Öne Çıkan Projeler**")
-        c1, c2 = st.columns(2, gap="large")
-        for i, proj in enumerate(featured):
-            with (c1 if i % 2 == 0 else c2):
-                render_project_card(proj)
-
-    if others:
-        st.markdown("<hr class='divider'>", unsafe_allow_html=True)
-        st.markdown("**Diğer Projeler**")
-        cols = st.columns(min(len(others), 3), gap="large")
-        for i, proj in enumerate(others):
-            with cols[i % 3]:
-                render_project_card(proj)
+    cols = st.columns(min(len(filtered), 3) if filtered else 1, gap="large")
+    for i, proj in enumerate(filtered):
+        with cols[i % 3]:
+            render_project_card(proj)
 
     if not filtered:
         st.info("Bu kategoride proje bulunamadı.")
@@ -598,15 +564,20 @@ elif page == NAV[2]:
 
         with col_img:
             if img_path.exists():
-                st.image(str(img_path), use_container_width=True)
-            else:
-                st.markdown(f"""
-                <div style="background:var(--bg-card);border:1px dashed rgba(0,212,255,0.2);
-                            border-radius:4px;padding:2rem;text-align:center;color:var(--text-muted);
-                            font-family:'Space Mono';font-size:0.75rem;">
-                    📁 {cert.get('image_file','')}<br>
-                    <span style="font-size:0.65rem;">/assets klasörüne ekleyin</span>
-                </div>""", unsafe_allow_html=True)
+                img_file = cert.get("image_file", "")
+                if img_file.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+                    st.image(str(img_path), use_container_width=True)
+                elif img_file.lower().endswith(".pdf"):
+                    with open(str(img_path), "rb") as pdf_f:
+                        import base64
+                        b64 = base64.b64encode(pdf_f.read()).decode()
+                    st.markdown(
+                        f'''<iframe src="data:application/pdf;base64,{b64}"
+                            width="100%" height="320"
+                            style="border:1px solid rgba(0,212,255,0.2);border-radius:4px;">
+                        </iframe>''',
+                        unsafe_allow_html=True
+                    )
 
         st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 
@@ -622,7 +593,7 @@ elif page == NAV[3]:
     st.markdown('<div class="section-header">İletişim<small>// CONTACT</small></div>',
                 unsafe_allow_html=True)
 
-    col1, col2 = st.columns([2, 1], gap="large")
+    col1, _ = st.columns([2, 1], gap="large")
     with col1:
         contacts = [
             ("📧", "E-posta", "enesboz446@gmail.com", "mailto:enesboz446@gmail.com"),
@@ -639,19 +610,7 @@ elif page == NAV[3]:
                 </div>
             </div>""", unsafe_allow_html=True)
 
-    with col2:
-        st.markdown("""
-        <div class="contact-box" style="margin-top:0;">
-            <div style="font-family:'Syne';font-size:1rem;color:var(--text-primary);margin-bottom:0.5rem;">
-                Açık Pozisyonlar
-            </div>
-            <div style="font-size:0.82rem;color:#9aa3b8;line-height:1.7;">
-                ✅ FPGA / RTL Mühendisi<br>
-                ✅ Gömülü Sistem Mühendisi<br>
-                ✅ Python Geliştirici<br>
-                ✅ Serbest / Freelance
-            </div>
-        </div>""", unsafe_allow_html=True)
+
 
 
 

@@ -1,32 +1,119 @@
 [
   {
-    "id": 1,
-    "title": "Otomotiv Yaz Kampı",
-    "issuer": "OİB",
-    "date": "2025",
-    "category": "OTOMOTİV",
-    "credential_url": "https://dogrulama.ogrencikariyeri.com/",
-    "image_file": "Ekran görüntüsü 2026-03-09 172948.png",
-    "description": "Yapay zeka eğitimine giriş. Doğrulama anahtarı: OSDFA1CD71B "
-  },
-  {
-    "id": 2,
     "title": "Borusan Teknoloji Okulu",
-    "issuer": "BORUSAN",
-    "date": "2025",
-    "category": "Otomotiv/Yazılım/Yenilenebilir Enerji",
-    "credential_url": "https://toptalent.co/businessschool/dogrulama/",
-    "image_file": "Ekran görüntüsü 2026-03-09 173008.png",
-    "description": "Sektöre genel bakış. Doğrulama anahtarı: 921359-175-200-3894"
+    "issuer": "Borusan / Toptalent Business School",
+    "date": "08.07.2025",
+    "category": "Başarı Sertifikası",
+    "description": "Yapay Zeka, Makine Öğrenmesi, Otomotiv Teknolojileri, Yazılım, Otomasyon ve Yenilenebilir Enerji konularını kapsayan 8 modül 5 saatlik eğitim programı.",
+    "credential_url": "https://toptalent.co/businessschool/verify",
+    "image_file": "cert_borusan.pdf"
   },
   {
-    "id": 3,
-    "title": "Yapay Zeka Eğitimi",
-    "issuer": "ODTÜ",
-    "date": "2025",
-    "category": "Yapay Zeka",
-    "credential_url": "https://bilgeis.net/",
-    "image_file": "Ekran görüntüsü 2026-03-09 175048.png",
-    "description": "Yapay Zeka Üzerine Eğitim. Doğrulama anahtarı:  c834ab30-f628-11ef-9604-915bc57cf948"
+    "title": "Otomotiv Yaz Kampı",
+    "issuer": "OİB / OSD",
+    "date": "03.07.2025",
+    "category": "Katılım Sertifikası",
+    "description": "30.06.2025–03.07.2025 tarihleri arasında çevrimiçi gerçekleştirilen Otomotiv Yaz Kampı'nda 15 oturumdan en az 12 oturuma katılım.",
+    "credential_url": "https://dogrulama.ogrencikariyeri.com",
+    "image_file": "cert_otomotiv.jpg"
+  },
+  {
+    "title": "Algoritma Tasarımı",
+    "issuer": "BTK Akademi",
+    "date": "02.05.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_algoritma.pdf"
+  },
+  {
+    "title": "STM32 ile Gömülü Yazılım Geliştirme",
+    "issuer": "BTK Akademi",
+    "date": "23.04.2025",
+    "category": "Gömülü Sistemler",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_stm32.pdf"
+  },
+  {
+    "title": "AutoCAD ile 2D Tasarımlar",
+    "issuer": "BTK Akademi",
+    "date": "11.04.2025",
+    "category": "FPGA/Donanım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_autocad.pdf"
+  },
+  {
+    "title": "Bilgi Teknolojilerine Giriş",
+    "issuer": "BTK Akademi",
+    "date": "21.03.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_bilgi_teknoloji.pdf"
+  },
+  {
+    "title": "İkna Becerileri",
+    "issuer": "BTK Akademi",
+    "date": "06.03.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_ikna.pdf"
+  },
+  {
+    "title": "Problem Çözme Teknikleri",
+    "issuer": "BTK Akademi",
+    "date": "06.03.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_problem.pdf"
+  },
+  {
+    "title": "Girişimcilikte Sunum Teknikleri ve İletişim Yönetimi",
+    "issuer": "BTK Akademi",
+    "date": "02.03.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_girisim_sunum.pdf"
+  },
+  {
+    "title": "Tasarımların Korunması",
+    "issuer": "BTK Akademi",
+    "date": "02.03.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_tasarim.pdf"
+  },
+  {
+    "title": "Herkes için Yapay Zeka I",
+    "issuer": "Kodluyoruz / ODTÜ / bilgeis.net",
+    "date": "01.03.2025",
+    "category": "Python/Yazılım",
+    "description": "AB ve Türkiye Cumhuriyeti tarafından finanse edilen EMpower projesi kapsamında çevrim içi eğitim.",
+    "credential_url": "https://bilgeis.net",
+    "image_file": "cert_yapay_zeka_1.pdf"
+  },
+  {
+    "title": "C Programlama Dili",
+    "issuer": "BTK Akademi",
+    "date": "28.02.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_c_prog.pdf"
+  },
+  {
+    "title": "Yapay Zekaya Giriş",
+    "issuer": "BTK Akademi",
+    "date": "27.02.2025",
+    "category": "Python/Yazılım",
+    "description": "Bilgi Teknolojileri ve İletişim Kurumu tarafından sunulan çevrim içi eğitim.",
+    "credential_url": "https://www.btkakademi.gov.tr",
+    "image_file": "cert_yapay_zeka_giris.pdf"
   }
 ]
