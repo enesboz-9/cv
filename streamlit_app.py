@@ -429,6 +429,19 @@ if page == NAV[0]:
         </p>
         """, unsafe_allow_html=True)
 
+        st.markdown("""
+        <a href="https://enesboz-9.github.io/blog/" target="_blank"
+           style="display:inline-flex;align-items:center;gap:0.5rem;
+                  margin-top:1.25rem;padding:0.55rem 1.2rem;
+                  background:linear-gradient(135deg,rgba(0,212,255,0.12),rgba(0,255,136,0.08));
+                  border:1px solid rgba(0,212,255,0.4);border-radius:4px;
+                  font-family:'Space Mono',monospace;font-size:0.8rem;
+                  color:#00d4ff;text-decoration:none;
+                  transition:all 0.2s;">
+            ✍️ Teknoloji &amp; Yazılım Blogum → enesboz-9.github.io/blog
+        </a>
+        """, unsafe_allow_html=True)
+
         st.markdown('<div class="section-header" style="font-size:1.1rem;margin-top:1.5rem;">Eğitim<small>// EDUCATION</small></div>',
                     unsafe_allow_html=True)
         st.markdown("""
@@ -486,11 +499,6 @@ elif page == NAV[1]:
             hw_items = " ".join(f'<span class="tag tag-green">{h}</span>' for h in proj["hardware"])
             hw_html  = f'<div style="margin-top:0.5rem;">{hw_items}</div>'
 
-        s = proj.get("status", "")
-        is_active = s in ("Aktif", "Aktif Geliştirme")
-        dot_color = "#00ff88" if is_active else "#6b7a99"
-        dot_shadow = f"0 0 6px {dot_color}" if is_active else "none"
-
         card_html = (
             '<div class="project-card">' +
             f'<div class="card-category">{proj["category"]}</div>' +
@@ -499,10 +507,7 @@ elif page == NAV[1]:
             f'<div class="card-desc">{proj["description"]}</div>' +
             f'<div class="tag-row">{tag_html}</div>' +
             hw_html +
-            '<div style="margin-top:1rem;display:flex;align-items:center;gap:0.5rem;">' +
-            f'<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:{dot_color};box-shadow:{dot_shadow};"></span>' +
-            f'<span style="font-family:Space Mono,monospace;font-size:0.7rem;color:#6b7a99;">{s}</span>' +
-            '</div></div>'
+            '</div>'
         )
         st.markdown(card_html, unsafe_allow_html=True)
 

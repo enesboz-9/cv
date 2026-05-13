@@ -9,7 +9,6 @@
     "hardware": [],
     "software": ["Python 3.11","Pandas","Plotly","Streamlit","yfinance / BIST API"],
     "github_url": "https://github.com/enesboz-9/bist",
-    "status": "Aktif Geliştirme",
     "highlight": true,
     "demo_url": "https://liicwet2rsxjrxjmtbvt5w.streamlit.app/"
   },
@@ -23,7 +22,6 @@
     "hardware": [],
     "software": ["Python","python-telegram-bot","Pandas","BIST API"],
     "github_url": "https://github.com/enesboz-9/bist-bot",
-    "status": "Aktif Geliştirme",
     "highlight": true,
     "demo_url": ""
   },
@@ -37,9 +35,8 @@
     "hardware": [],
     "software": ["Python","AI APIs"],
     "github_url": "https://github.com/enesboz-9/a-y-nlendirici",
-    "status": "Tamamlandı",
     "highlight": true,
-    "demo_url": ""
+    "demo_url": "https://a-y-nlendirici-zggdyhga27ubargergkijp.streamlit.app/"
   },
   {
     "id": 4,
@@ -51,7 +48,6 @@
     "hardware": [],
     "software": ["Python"],
     "github_url": "https://github.com/enesboz-9/news.app",
-    "status": "Tamamlandı",
     "highlight": false,
     "demo_url": "https://newsapp-nbjpwfaw7ezfvappvzkj2iy.streamlit.app/"
   },
@@ -65,36 +61,33 @@
     "hardware": [],
     "software": ["Python","VHDL","Vivado"],
     "github_url": "https://github.com/enesboz-9/fpga-kod-analiz-r",
-    "status": "Tamamlandı",
     "highlight": false,
-    "demo_url": ""
+    "demo_url": "https://fpga-code.streamlit.app/"
   },
   {
     "id": 6,
-    "title": "VGA Kontrol Birimi",
-    "subtitle": "FPGA Üzerinde Pixel Seviyesi Grafik Kontrolcüsü",
-    "description": "VHDL ile tasarlanmış 640x480@60Hz VGA sinyali üreten grafik kontrolcüsü. Yatay/dikey senkronizasyon zamanlama üreteci, renk paletleri ve basit sprite render motoru içermektedir.",
-    "category": "FPGA / VHDL",
-    "tags": ["VHDL","VGA","FPGA","Grafik","Timing","FSM"],
-    "hardware": ["Digilent Nexys A7","VGA Monitör"],
-    "software": ["Vivado","VHDL","ModelSim"],
-    "github_url": "https://github.com/kullanici-adiniz/vga-controller-fpga",
-    "status": "Tamamlandı",
-    "highlight": false,
-    "demo_url": ""
+    "title": "Teknoloji & Yazılım Blogu",
+    "subtitle": "Teknoloji, yazılım ve mühendislik üzerine kişisel blog",
+    "description": "Yazılım geliştirme, yapay zeka, mühendislik deneyimleri ve teknoloji dünyasındaki gelişmeler hakkında düzenli olarak Türkçe içerikler yayınladığım kişisel blog platformu.",
+    "category": "Blog / İçerik",
+    "tags": ["Blog","Yazılım","Teknoloji","Türkçe","Mühendislik"],
+    "hardware": [],
+    "software": ["GitHub Pages"],
+    "github_url": "",
+    "highlight": true,
+    "demo_url": "https://enesboz-9.github.io/blog/"
   },
   {
     "id": 7,
-    "title": "PWM Motor Sürücü",
-    "subtitle": "Dijital PWM ile DC Motor Hız Kontrolü",
-    "description": "FPGA tabanlı, VHDL ile yazılmış, ayarlanabilir frekans ve duty cycle destekleyen PWM sinyal üreticisi. H-köprüsü entegrasyonu ile DC motor yönü ve hız kontrolü sağlar.",
-    "category": "FPGA / Gömülü",
-    "tags": ["VHDL","PWM","Motor Kontrolü","H-Köprüsü","FPGA"],
-    "hardware": ["FPGA Geliştirme Kartı","L298N H-Köprüsü","DC Motor"],
-    "software": ["Vivado","VHDL"],
-    "github_url": "https://github.com/kullanici-adiniz/pwm-motor-driver",
-    "status": "Tamamlandı",
-    "highlight": false,
-    "demo_url": ""
+    "title": "Oxford 5000 Kelime Uygulaması",
+    "subtitle": "Modern İngilizce Kelime Öğrenme Platformu",
+    "description": "Oxford 5000 listesindeki kelimeleri içeren, ücretsiz Groq API ile çalışan modern kelime öğrenme uygulaması. Yapay zeka destekli örnek cümleler ve interaktif alıştırmalar sunar.",
+    "category": "AI / Eğitim",
+    "tags": ["Groq API","AI","İngilizce","Oxford 5000","Kelime","Eğitim"],
+    "hardware": [],
+    "software": ["JavaScript","Groq API","GitHub Pages"],
+    "github_url": "",
+    "highlight": true,
+    "demo_url": "https://enesboz-9.github.io/xford-5000-app/"
   }
 ]
